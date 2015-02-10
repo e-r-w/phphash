@@ -3,8 +3,13 @@
   <title>PHP Test</title>
  </head>
  <body>
- <?php 
-   $hash = hash_hmac('sha256', 'The quick brown fox jumped over the lazy dog.', 'secret'); 
+ <?php
+   $qs = $_SERVER['QUERY_STRING']
+   $id = $_GET['id']
+   $time = $_GET['time']
+   $qshash = $_GET['hash']
+   $hash = hash_hmac('sha256', $id + $time, 'secret');
+   echo $id + $time
    echo $hash;
  ?> 
  </body>
