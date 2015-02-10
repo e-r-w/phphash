@@ -10,7 +10,7 @@
    $qshash = $_GET['hash']
    $hash = hash_hmac('sha256', "{$id}{$time}", 'secret');
    
-   echo $qs;
+   echo "hash {$hash} clear{$id}{$time}";
  ?> 
  </body>
 </html>
