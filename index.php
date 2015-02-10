@@ -6,8 +6,10 @@
  <?php
    
    $id = $_GET["id"];
-  
-   echo $id;
+   $ts= $_GET["ts"];
+   $hash = $_GET["hash"];
+   
+   echo $id . $ts . $hash
  ?> 
  </body>
 </html>
