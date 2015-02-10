@@ -8,8 +8,8 @@
    $id = $_GET['id']
    $time = $_GET['time']
    $qshash = $_GET['hash']
-   $hash = hash_hmac('sha256', $id + $time, 'secret');
-   echo $id + $time
+   $hash = hash_hmac('sha256', "{$id}{$time}", 'secret');
+   
    echo $hash;
  ?> 
  </body>
